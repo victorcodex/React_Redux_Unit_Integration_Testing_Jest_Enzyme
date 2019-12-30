@@ -6,7 +6,7 @@ const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 export const middlewares = [ReduxThunk];
 
-// export const createStoreWithMiddleware = composeEnhancer(applyMiddleware(...middlewares))(createStore);
-export const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
+export const createStoreWithMiddleware = composeEnhancer(applyMiddleware(...middlewares))(createStore);
+// export const createStoreWithMiddleware = applyMiddleware(...middlewares)(createStore);
 
 export const store = createStoreWithMiddleware(RootReducer)
